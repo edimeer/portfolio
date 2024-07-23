@@ -36,10 +36,10 @@ const ExperienceSection = () => {
             Actively monitor and resolve any blockers that interns and junior developers face, ensuring their progress and productivity are not hindered.
           </li>
           <li className="font-md text-gray-700 text-justify">
-            Facilitate daily scrum meetings each morning to discuss progress, identify roadblocks, and plan the day's work, fostering collaboration and clear communication within the team.
+            Facilitate daily scrum meetings each morning to discuss progress, identify roadblocks, and plan the day&apos;s work, fostering collaboration and clear communication within the team.
           </li>
           <li className="font-md text-gray-700 text-justify">
-            Prioritize and manage daily tasks by organizing Jira tickets, ensuring the team's focus aligns with project goals and deadlines.
+            Prioritize and manage daily tasks by organizing Jira tickets, ensuring the team&apos;s focus aligns with project goals and deadlines.
           </li>
           <li className="font-md text-gray-700 text-justify">
             Engage directly with clients to clarify task requirements, gather feedback, and ensure their expectations are met, fostering strong client relationships and delivering high-quality results.

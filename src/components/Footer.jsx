@@ -35,7 +35,7 @@ const Footer = () => {
             </span>
           </a>
         </div>
-        <div class="mx-auto text-center text-gray-500 text-sm italic">
+        <div className="mx-auto text-center text-gray-500 text-sm italic">
           &copy; Edi Meer 2024, All Rights Reserved
         </div>
       </div>
