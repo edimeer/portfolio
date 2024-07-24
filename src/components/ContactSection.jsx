@@ -3,7 +3,7 @@ const ContactSection = () => {
     <section>
       <div className="flex flex-col mt-10 lg:mt-0">
         <div className="rounded-full bg-cOrange border w-2/3">
-          <h2 className="text-2xl text-white p-1 pl-3 text-bold">Contact</h2>
+          <h2 className="text-1xl text-white p-1 pl-3 text-bold lg:text-2xl">Contact</h2>
         </div>
         <div className="space-y-2 mt-5">
           <div className="text-cMustard flex items-center space-x-1">

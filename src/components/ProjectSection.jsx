@@ -4,7 +4,7 @@ const ProjectSection = () => {
   return (
     <section id="projects" className="py-10 pl-10 space-y-7">
       <div className="rounded-full bg-cOrange border w-2/3">
-        <h2 className="text-2xl text-white p-1 pl-3 text-bold">Projects</h2>
+        <h2 className="text-1xl text-white p-1 pl-3 text-bold lg:text-2xl">Projects</h2>
       </div>
       <div className="block max-w border border-cMustard rounded-lg shadow">
         <img className="w-max rounded-lg" src={carelever} alt="profile" />
