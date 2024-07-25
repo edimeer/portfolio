@@ -7,7 +7,7 @@ const ProfileSection = () => {
       <div className="flex flex-col mt-10 lg:flex-row">
         <img className="hidden lg:flex lg:w-1/2" src={profile} alt="profile" />
         <div className="ml-2 flex flex-col justify-between lg:mt-10">
-          <h4 className="text-3xl font-bold text-cOrange">Edi Edwardson Meer</h4>
+          <h4 className="text-3xl font-bold text-gray-700">Edi Edwardson Meer</h4>
           <h5 className="text-lg text-cMustard font-semibold italic">Software Engineer</h5>
           <p className="mt-4 mb-3 text-md text-justify text-gray-700">
             Specializing in <span className="text-cMustard font-semibold">Ruby on Rails</span> for backend development and <span className="text-cMustard font-semibold">Angular</span> and <span className="text-cMustard font-semibold">React</span> for frontend development, I create robust, scalable, and user-friendly web applications.
