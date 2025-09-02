@@ -12,7 +12,7 @@ const Header = () => {
         <div className="flex h-16 items-center justify-between">
           <a href="/" className="flex items-center gap-2 font-extrabold tracking-tight">
             <img className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-brand-500 text-white" src={logo} alt="logo" />
-            <span className="text-lg">Edi Edwardson Meer</span>
+            <span className="text-lg">Edi</span>
           </a>
 
           <nav className="hidden md:flex items-center gap-6 text-sm font-medium">

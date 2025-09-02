@@ -9,14 +9,14 @@ const KeyMetricsSection = () => {
           </div>
           <div className="space-y-1">
             <dt className="text-sm text-slate-500">Projects Shipped</dt>
-            <dd className="text-3xl font-extrabold">30+</dd>
+            <dd className="text-3xl font-extrabold">--</dd>
           </div>
           <div className="space-y-1">
-            <dt className="text-sm text-slate-500">Avg Lighthouse</dt>
-            <dd className="text-3xl font-extrabold">98</dd>
+            <dt className="text-sm text-slate-500">Towers Destroyed</dt>
+            <dd className="text-3xl font-extrabold">99+</dd>
           </div>
           <div className="space-y-1">
-            <dt className="text-sm text-slate-500">Coffee Consumed</dt>
+            <dt className="text-sm text-slate-500">Matcha Consumed</dt>
             <dd className="text-3xl font-extrabold">∞</dd>
           </div>
         </dl>

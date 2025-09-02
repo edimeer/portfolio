@@ -5,9 +5,9 @@ const ContactSection = () => {
         <div>
           <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">Let’s build something</h2>
           <p className="mt-2 max-w-prose text-slate-600 dark:text-slate-300">Open to roles where I can create high-quality
-            experiences and mentor teammates.</p>
+            experiences.</p>
           <div className="mt-6 space-y-2 text-slate-600 dark:text-slate-300">
-            <p>📍 Manila · Remote/Hybrid</p>
+            <p>📍 Batangas · Remote/Hybrid</p>
             <p>✉️ <a
                 className="underline decoration-dashed underline-offset-2 hover:text-brand-600 dark:hover:text-brand-300"
                 href="mailto:edison.cmeer@gmail.com">edison.cmeer@gmail.com</a></p>

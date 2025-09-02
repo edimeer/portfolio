@@ -1,23 +1,25 @@
 import resume from "../assets/files/edi-resume.pdf";
+import hero from "../assets/images/hero.jpg";
 
 const HeroSection = () => {
   return (
     <section className="relative overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-brand-50/70 to-transparent dark:from-brand-900/10"></div>
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-20">
         <div className="grid items-center gap-10 md:grid-cols-2">
           <div className="space-y-6 animate-fade-up">
             <p
               className="inline-flex items-center gap-2 rounded-full border border-brand-200 bg-brand-50 px-3 py-1 text-xs font-semibold text-brand-700 dark:border-brand-800 dark:bg-brand-900/30 dark:text-brand-200">
-              Available for full-time · Remote friendly
+              Available for full-time/part-time · Remote friendly
             </p>
             <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
-              Hi, I’m <span className="text-brand-600 dark:text-brand-400">Edi</span>. I build delightful, performant
-              web experiences.
+              Hi, I’m <span className="text-brand-600 dark:text-brand-400">Edi</span>.
+               I build Full Stack apps with Ruby on Rails and Angular/React.
             </h1>
             <p className="text-slate-600 dark:text-slate-300 max-w-prose">
-              Frontend-focused software engineer with a knack for design systems, accessible UI, and data-driven apps. I
-              turn ideas into shippable products.
+              With 6+ years of professional experience, I’ve worked across product development,
+              feature shipping, and system maintenance—leading full-stack implementations and solving critical issues in production.
+              I care about clean architecture, fast UI, and building tools that make users' lives easier.
             </p>
             <div className="flex flex-wrap gap-3">
               <a href="#projects"
@@ -37,14 +39,14 @@ const HeroSection = () => {
               </a>
             </div>
             <div className="flex items-center gap-4 pt-2 text-slate-500">
-              <a href="https://github.com/your" className="hover:text-slate-900 dark:hover:text-white" aria-label="GitHub">
+              <a href="https://github.com/edimeer" className="hover:text-slate-900 dark:hover:text-white" aria-label="GitHub">
                 {/* <!-- GitHub icon --> */}
                 <svg className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path
                     d="M12 .5a12 12 0 00-3.79 23.4c.6.1.82-.26.82-.58v-2c-3.35.73-4.05-1.6-4.05-1.6-.55-1.4-1.35-1.78-1.35-1.78-1.1-.76.08-.75.08-.75 1.22.08 1.86 1.25 1.86 1.25 1.08 1.86 2.84 1.32 3.53 1 .11-.8.43-1.32.78-1.62-2.67-.3-5.47-1.34-5.47-5.95 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.17 0 0 1-.32 3.3 1.23a11.5 11.5 0 016 0c2.3-1.55 3.3-1.23 3.3-1.23.66 1.65.25 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.62-2.8 5.64-5.48 5.94.44.38.83 1.12.83 2.26v3.35c0 .32.22.69.83.57A12 12 0 0012 .5z" />
                 </svg>
               </a>
-              <a href="https://www.linkedin.com/in/your" className="hover:text-slate-900 dark:hover:text-white"
+              <a href="https://www.linkedin.com/in/edi-meer" className="hover:text-slate-900 dark:hover:text-white"
                 aria-label="LinkedIn">
                 {/* <!-- LinkedIn icon --> */}
                 <svg className="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -58,7 +60,7 @@ const HeroSection = () => {
           <div className="relative">
             <div
               className="mx-auto h-64 w-64 overflow-hidden rounded-2xl ring-1 ring-slate-900/10 shadow-card dark:ring-white/10 md:h-80 md:w-80">
-              <img src="https://picsum.photos/800?random=2" alt="Portrait of Edi Edwardson Meer"
+              <img src={hero} alt="Portrait of Edi Edwardson Meer"
                 className="h-full w-full object-cover" />
             </div>
             <div
