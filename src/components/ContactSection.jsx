@@ -1,31 +1,54 @@
 const ContactSection = () => {
   return (
-    <section>
-      <div className="flex flex-col mt-10 lg:mt-0">
-        <div className="rounded-full bg-cOrange border w-2/3">
-          <h2 className="text-1xl text-white p-1 pl-3 text-bold lg:text-2xl">Contact</h2>
+    <section id="contact" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
+      <div className="grid gap-10 md:grid-cols-2">
+        <div>
+          <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">Let’s build something</h2>
+          <p className="mt-2 max-w-prose text-slate-600 dark:text-slate-300">Open to roles where I can create high-quality
+            experiences and mentor teammates.</p>
+          <div className="mt-6 space-y-2 text-slate-600 dark:text-slate-300">
+            <p>📍 Manila · Remote/Hybrid</p>
+            <p>✉️ <a
+                className="underline decoration-dashed underline-offset-2 hover:text-brand-600 dark:hover:text-brand-300"
+                href="mailto:edison.cmeer@gmail.com">edison.cmeer@gmail.com</a></p>
+          </div>
         </div>
-        <div className="space-y-2 mt-5">
-          <div className="text-cMustard flex items-center space-x-1">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
-              <path fill-rule="evenodd" d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd" />
-            </svg>
-            <p className="text-gray-700 text-semibold text-md">Sto. Tomas, Batangas</p>
-          </div>
-          <div className="text-cMustard flex items-center space-x-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
-            <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z" clip-rule="evenodd" />
-          </svg>
-            <p className="text-gray-700 text-semibold text-md">0906-2866-662</p>
-          </div>
-          <div className="text-cMustard flex items-center space-x-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5">
-            <path fill-rule="evenodd" d="M6.912 3a3 3 0 0 0-2.868 2.118l-2.411 7.838a3 3 0 0 0-.133.882V18a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3v-4.162c0-.299-.045-.596-.133-.882l-2.412-7.838A3 3 0 0 0 17.088 3H6.912Zm13.823 9.75-2.213-7.191A1.5 1.5 0 0 0 17.088 4.5H6.912a1.5 1.5 0 0 0-1.434 1.059L3.265 12.75H6.11a3 3 0 0 1 2.684 1.658l.256.513a1.5 1.5 0 0 0 1.342.829h3.218a1.5 1.5 0 0 0 1.342-.83l.256-.512a3 3 0 0 1 2.684-1.658h2.844Z" clip-rule="evenodd" />
-          </svg>
 
-            <p className="text-gray-700 text-semibold text-md">edison.cmeer@gmail.com</p>
+        <form id="contactForm"
+          className="rounded-2xl border border-slate-900/10 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-slate-900"
+          action="https://formspree.io/f/your-id" method="POST">
+          <div className="grid gap-4">
+            <div>
+              <label for="name" className="mb-1 block text-sm font-medium">Name</label>
+              <input id="name" name="name" required
+                className="w-full rounded-md border border-slate-300 bg-white px-3 py-2 dark:border-slate-700 dark:bg-slate-950" />
+            </div>
+            <div>
+              <label for="email" className="mb-1 block text-sm font-medium">Email</label>
+              <input id="email" name="email" type="email" required
+                className="w-full rounded-md border border-slate-300 bg-white px-3 py-2 dark:border-slate-700 dark:bg-slate-950" />
+            </div>
+            <div>
+              <label for="message" className="mb-1 block text-sm font-medium">Message</label>
+              <textarea id="message" name="message" rows="5" required
+                className="w-full rounded-md border border-slate-300 bg-white px-3 py-2 dark:border-slate-700 dark:bg-slate-950"></textarea>
+            </div>
+            <div className="flex items-center justify-between">
+              <label className="inline-flex items-center gap-2 text-sm">
+                <input type="checkbox" required className="rounded border-slate-300 text-brand-600 focus:ring-brand-500" />
+                <span>Consent to being contacted</span>
+              </label>
+              <button
+                className="inline-flex items-center gap-2 rounded-md bg-brand-600 px-4 py-2 font-semibold text-white shadow hover:bg-brand-700 focus:outline-none focus:ring-2 focus:ring-brand-400 focus:ring-offset-2 dark:focus:ring-offset-slate-900">
+                Send
+                <svg className="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+            <p id="formStatus" className="hidden text-sm"></p>
           </div>
-        </div>
+        </form>
       </div>
     </section>
   )

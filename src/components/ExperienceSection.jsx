@@ -1,51 +1,42 @@
 const ExperienceSection = () => {
   return (
-    <section id="experiences" className="pl-10 space-y-7">
-      <div className="rounded-full bg-cOrange border w-2/3">
-        <h2 className="text-1xl text-white p-1 pl-3 text-bold lg:text-2xl">Experiences</h2>
-      </div>
-      <div className="block space-y-2 max-w p-6 border border-cMustard rounded-lg shadow">
-        <h5 className="text-lg font-bold text-gray-700">
-          You_Source Inc.
-          <span className="ml-2 text-xs text-cOrange italic">2019 - 2024</span>
-        </h5>
-        <p className="text-cMustard text-sm italic">Full-Stack Software Engineer</p>
-        <ul className="ml-4 space-y-2 marker:text-cMustard list-outside list-disc">
-          <li className="font-md text-gray-700 text-justify">
-            Develop and maintain backend systems using Ruby on Rails, including designing server-side logic and integrating RESTful APIs to support seamless frontend-backend communication.
-          </li>
-          <li className="font-md text-gray-700 text-justify">
-            Implement and maintain user interfaces using Angular, creating responsive and user-friendly experiences that meet client requirements and enhance user satisfaction.
-          </li>
-          <li className="font-md text-gray-700 text-justify">
-            Quickly address and fix urgent production issues to maintain the stability and reliability of the application, minimizing downtime and impact on users.
-          </li>
-          <li className="font-md text-gray-700 text-justify">
-            Oversee and execute deployments to the production environment, ensuring smooth and error-free releases by following best practices and thorough testing.
-          </li>
-          <li className="font-md text-gray-700 text-justify">
-            Conduct thorough code reviews on GitHub to ensure high code quality, security, and performance. Create and manage pull requests, facilitating constructive feedback and collaborative improvement.
-          </li>
-          <li className="font-md text-gray-700 text-justify">
-            Collaborate with teammates by offering help with their tasks when needed, promoting a supportive and cooperative team environment.
-          </li>
-          <li className="font-md text-gray-700 text-justify">
-            Provide guidance and support to junior developers and interns, sharing knowledge and best practices to help them grow their skills and confidence in their roles.
-          </li>
-          <li className="font-md text-gray-700 text-justify">
-            Actively monitor and resolve any blockers that interns and junior developers face, ensuring their progress and productivity are not hindered.
-          </li>
-          <li className="font-md text-gray-700 text-justify">
-            Facilitate daily scrum meetings each morning to discuss progress, identify roadblocks, and plan the day's work, fostering collaboration and clear communication within the team.
-          </li>
-          <li className="font-md text-gray-700 text-justify">
-            Prioritize and manage daily tasks by organizing Jira tickets, ensuring the team's focus aligns with project goals and deadlines.
-          </li>
-          <li className="font-md text-gray-700 text-justify">
-            Engage directly with clients to clarify task requirements, gather feedback, and ensure their expectations are met, fostering strong client relationships and delivering high-quality results.
-          </li>
-        </ul>
-      </div>
+    <section id="experience" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
+      <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">Experience</h2>
+      <ol className="mt-8 relative border-s border-slate-200 dark:border-slate-800">
+        {/* <!-- Item --> */}
+        <li className="ms-6 pb-10">
+          <span
+            className="absolute -start-3 mt-1 flex h-6 w-6 items-center justify-center rounded-full bg-brand-600 text-white ring-8 ring-white dark:ring-slate-950">1</span>
+          <h3 className="font-semibold">Senior Frontend Engineer · <span className="text-slate-500">TechCorp</span></h3>
+          <p className="text-sm text-slate-500">2023 — Present</p>
+          <ul className="mt-2 list-disc space-y-1 ps-5 text-slate-700 dark:text-slate-300">
+            <li>Led migration to <strong>Next.js + App Router</strong>, improving TTFB by 40%.</li>
+            <li>Built component library in <strong>React + Tailwind</strong> adopted across 3 squads.</li>
+            <li>Owned performance budget, keeping Lighthouse PWA score ≥ 95.</li>
+          </ul>
+        </li>
+        <li className="ms-6 pb-10">
+          <span
+            className="absolute -start-3 mt-1 flex h-6 w-6 items-center justify-center rounded-full bg-brand-600 text-white ring-8 ring-white dark:ring-slate-950">2</span>
+          <h3 className="font-semibold">Frontend Engineer · <span className="text-slate-500">Acme Inc.</span></h3>
+          <p className="text-sm text-slate-500">2020 — 2023</p>
+          <ul className="mt-2 list-disc space-y-1 ps-5 text-slate-700 dark:text-slate-300">
+            <li>Shipped real-time analytics dashboards with websockets + D3.</li>
+            <li>Introduced testing strategy with <strong>Playwright</strong> & <strong>RTL</strong>.</li>
+            <li>Mentored juniors; ran monthly UI performance clinics.</li>
+          </ul>
+        </li>
+        <li className="ms-6">
+          <span
+            className="absolute -start-3 mt-1 flex h-6 w-6 items-center justify-center rounded-full bg-brand-600 text-white ring-8 ring-white dark:ring-slate-950">3</span>
+          <h3 className="font-semibold">Freelance</h3>
+          <p className="text-sm text-slate-500">2017 — 2020</p>
+          <ul className="mt-2 list-disc space-y-1 ps-5 text-slate-700 dark:text-slate-300">
+            <li>Built marketing sites & stores (Astro, Next, Shopify Hydrogen).</li>
+            <li>Delivered accessibility remediations to WCAG AA.</li>
+          </ul>
+        </li>
+      </ol>
     </section>
   )
 }
