@@ -6,7 +6,7 @@ const ExperienceSection = () => {
         {/* <!-- Item --> */}
         <li className="ms-6 pb-10">
           <span
-            className="absolute -start-3 mt-1 flex h-6 w-6 items-center justify-center rounded-full bg-brand-600 text-white ring-8 ring-white dark:ring-slate-950">1</span>
+            className="absolute -start-3 mt-1 flex h-6 w-6 items-center justify-center rounded-full bg-brand-600 text-white ring-8 ring-white dark:ring-slate-950"></span>
           <h3 className="font-semibold">Software Engineer · <span className="text-slate-500">Cloudstaff</span></h3>
           <p className="text-sm text-slate-500">2024 — Present</p>
           <p className="my-2">Working as part of a distributed team, I contribute to the development and maintenance of a full-featured property management platform serving agencies and tenants across Australia.</p>
@@ -29,7 +29,7 @@ const ExperienceSection = () => {
         </li>
         <li className="ms-6 pb-10">
           <span
-            className="absolute -start-3 mt-1 flex h-6 w-6 items-center justify-center rounded-full bg-brand-600 text-white ring-8 ring-white dark:ring-slate-950">2</span>
+            className="absolute -start-3 mt-1 flex h-6 w-6 items-center justify-center rounded-full bg-brand-600 text-white ring-8 ring-white dark:ring-slate-950"></span>
           <h3 className="font-semibold">Software Engineer · <span className="text-slate-500">You_Source Inc.</span></h3>
           <p className="text-sm text-slate-500">2019 — 2024</p>
           <p className="my-2">Developed and maintained a pre-employment medical screening system that evaluates whether workers are medically fit to work. The application served thousands of users and required robust architecture to ensure data security and accuracy.</p>

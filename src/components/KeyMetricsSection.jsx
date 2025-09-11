@@ -9,11 +9,11 @@ const KeyMetricsSection = () => {
           </div>
           <div className="space-y-1">
             <dt className="text-sm text-slate-500">Projects Shipped</dt>
-            <dd className="text-3xl font-extrabold">--</dd>
+            <dd className="text-3xl font-extrabold">2</dd>
           </div>
           <div className="space-y-1">
-            <dt className="text-sm text-slate-500">Towers Destroyed</dt>
-            <dd className="text-3xl font-extrabold">99+</dd>
+            <dt className="text-sm text-slate-500">Commits Pushed</dt>
+            <dd className="text-3xl font-extrabold">5k+</dd>
           </div>
           <div className="space-y-1">
             <dt className="text-sm text-slate-500">Matcha Consumed</dt>

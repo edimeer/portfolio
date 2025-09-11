@@ -1,63 +1,74 @@
 import React, { useMemo, useState } from 'react';
+import buildit from "../assets/images/buildit.jpg";
 
 const PROJECTS = [
   {
-    id: 'saas-dashboard',
-    title: 'SaaS Dashboard Kit',
-    tags: ['web','ui'],
+    id: 'buildit',
+    title: 'BuildIt',
+    tags: ['react','tailwind'],
     tech: ['React','Tailwind'],
-    img: 'https://picsum.photos/600/400?random=11',
-    live: '#',
-    code: '#',
-    blurb: 'Beautiful admin UI with charts, role-based access, and theming.',
+    img: buildit,
+    live: 'https://edimeer.github.io/buildit/',
+    code: 'https://github.com/edimeer/buildit',
+    blurb: 'BuildIt — A modern website template built with React and TailwindCSS. Features include a styled homepage, blog, services, contact form with validation, and dark mode. Designed as a flexible starter for company or portfolio websites.',
   },
-  {
-    id: 'nova-ds',
-    title: 'Design System “Nova”',
-    tags: ['ui'],
-    tech: ['Figma','Accessibility'],
-    img: 'https://picsum.photos/600/400?random=12',
-    caseStudy: '#',
-    blurb: 'Token-based DS powering multiple web apps.',
-  },
-  {
-    id: 'realtime-analytics',
-    title: 'Realtime Analytics',
-    tags: ['web','data'],
-    tech: ['Next.js','D3'],
-    img: 'https://picsum.photos/600/400?random=13',
-    live: '#',
-    code: '#',
-    blurb: 'Socket-powered telemetry + custom visualizations.',
-  },
-  {
-    id: 'landing-engine',
-    title: 'Landing Page Engine',
-    tags: ['web'],
-    tech: ['Astro','SEO'],
-    img: 'https://picsum.photos/600/400?random=14',
-    live: '#',
-    blurb: 'CMS-driven marketing sites with A/B testing.',
-  },
-  {
-    id: 'feature-store',
-    title: 'ML Feature Store UI',
-    tags: ['data'],
-    tech: ['Python','FastAPI'],
-    img: 'https://picsum.photos/600/400?random=15',
-    blurb: 'Manage and explore features across models.',
-  },
-  {
-    id: 'headless-commerce',
-    title: 'Headless Commerce',
-    tags: ['web','ui'],
-    tech: ['Vue','Stripe'],
-    img: 'https://picsum.photos/600/400?random=16',
-    blurb: 'Composable storefront with lightning-fast UX.',
-  },
+  // {
+  //   id: 'saas-dashboard',
+  //   title: 'SaaS Dashboard Kit (Mock data)',
+  //   tags: ['react','tailwind'],
+  //   tech: ['React','Tailwind'],
+  //   img: 'https://picsum.photos/600/400?random=11',
+  //   live: '#',
+  //   code: '#',
+  //   blurb: 'Beautiful admin UI with charts, role-based access, and theming.',
+  // },
+  // {
+  //   id: 'nova-ds',
+  //   title: 'Design System “Nova” (Mock data)',
+  //   tags: ['ui'],
+  //   tech: ['Figma','Accessibility'],
+  //   img: 'https://picsum.photos/600/400?random=12',
+  //   caseStudy: '#',
+  //   blurb: 'Token-based DS powering multiple web apps.',
+  // },
+  // {
+  //   id: 'realtime-analytics',
+  //   title: 'Realtime Analytics (Mock data)',
+  //   tags: ['react','rails'],
+  //   tech: ['Next.js','D3'],
+  //   img: 'https://picsum.photos/600/400?random=13',
+  //   live: '#',
+  //   code: '#',
+  //   blurb: 'Socket-powered telemetry + custom visualizations.',
+  // },
+  // {
+  //   id: 'landing-engine',
+  //   title: 'Landing Page Engine (Mock data)',
+  //   tags: ['react'],
+  //   tech: ['Astro','SEO'],
+  //   img: 'https://picsum.photos/600/400?random=14',
+  //   live: '#',
+  //   blurb: 'CMS-driven marketing sites with A/B testing.',
+  // },
+  // {
+  //   id: 'feature-store',
+  //   title: 'ML Feature Store UI (Mock data)',
+  //   tags: ['rails'],
+  //   tech: ['Python','FastAPI'],
+  //   img: 'https://picsum.photos/600/400?random=15',
+  //   blurb: 'Manage and explore features across models.',
+  // },
+  // {
+  //   id: 'headless-commerce',
+  //   title: 'Headless Commerce (Mock data)',
+  //   tags: ['react','tailwind'],
+  //   tech: ['Vue','Stripe'],
+  //   img: 'https://picsum.photos/600/400?random=16',
+  //   blurb: 'Composable storefront with lightning-fast UX.',
+  // },
 ];
 
-const FILTERS = ['all','web','ui','data'];
+const FILTERS = ['all','react','rails','tailwind'];
 
 const ProjectSection = () => {
   const [filter, setFilter] = useState('all');
@@ -72,7 +83,7 @@ const ProjectSection = () => {
       <div className="flex items-end justify-between gap-6">
         <div>
           <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">Selected Projects</h2>
-          <p className="mt-2 max-w-prose text-slate-600 dark:text-slate-300">A few things I’ve built recently.</p>
+          <p className="mt-2 max-w-prose text-slate-600 dark:text-slate-300">A few things I’ve built. <small className="italic">(Still in progress)</small></p>
         </div>
 
         {/* Desktop filter buttons */}
