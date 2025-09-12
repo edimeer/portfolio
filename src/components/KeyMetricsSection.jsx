@@ -1,3 +1,5 @@
+import { PROJECTS } from "../data/projects.js";
+
 const KeyMetricsSection = () => {
   return (
     <section className="border-y border-slate-900/10 dark:border-white/10 bg-grid">
@@ -8,8 +10,8 @@ const KeyMetricsSection = () => {
             <dd className="text-3xl font-extrabold">6+</dd>
           </div>
           <div className="space-y-1">
-            <dt className="text-sm text-slate-500">Projects Shipped</dt>
-            <dd className="text-3xl font-extrabold">2</dd>
+            <dt className="text-sm text-slate-500">Projects</dt>
+            <dd className="text-3xl font-extrabold">{PROJECTS.length}</dd>
           </div>
           <div className="space-y-1">
             <dt className="text-sm text-slate-500">Commits Pushed</dt>
