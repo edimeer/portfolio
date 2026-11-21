@@ -1,41 +1,51 @@
-import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
+import { createContext, useContext, useEffect, useMemo, useState } from "react";
 
-const ThemeContext = createContext({ theme: 'light', toggle: () => {} });
+// Dark is the default. index.html sets the `dark` class before React loads
+// so the page never flashes light; this provider takes over from there.
+const ThemeContext = createContext({ theme: "dark", toggle: () => {} });
+
+function readStoredTheme() {
+  try {
+    return localStorage.getItem("theme");
+  } catch {
+    return null;
+  }
+}
+
+function storeTheme(theme) {
+  try {
+    localStorage.setItem("theme", theme);
+  } catch {
+    // Private mode or blocked storage: the toggle still works for this visit.
+  }
+}
 
 export function ThemeProvider({ children }) {
-  const getInitial = () => {
-    const stored = localStorage.getItem('theme');
-    if (stored === 'light' || stored === 'dark') return stored;
-    // fall back to system preference
-    const prefersDark = window.matchMedia?.('(prefers-color-scheme: dark)').matches;
-    return prefersDark ? 'dark' : 'light';
-  };
+  const [theme, setTheme] = useState(() =>
+    readStoredTheme() === "light" ? "light" : "dark",
+  );
 
-  const [theme, setTheme] = useState(getInitial);
-
-  // keep DOM <html> class in sync
   useEffect(() => {
-    const root = document.documentElement;
-    root.classList.toggle('dark', theme === 'dark');
-    localStorage.setItem('theme', theme);
+    document.documentElement.classList.toggle("dark", theme === "dark");
   }, [theme]);
 
-  // also react to *live* system changes if user hasn't explicitly chosen
-  useEffect(() => {
-    const mq = window.matchMedia('(prefers-color-scheme: dark)');
-    const handler = (e) => {
-      const stored = localStorage.getItem('theme');
-      if (!stored) setTheme(e.matches ? 'dark' : 'light');
-    };
-    mq.addEventListener?.('change', handler);
-    return () => mq.removeEventListener?.('change', handler);
-  }, []);
-
-  const value = useMemo(() => ({ theme, toggle: () => setTheme(t => (t === 'dark' ? 'light' : 'dark')) }), [theme]);
+  const value = useMemo(
+    () => ({
+      theme,
+      toggle: () =>
+        setTheme((current) => {
+          const next = current === "dark" ? "light" : "dark";
+          storeTheme(next);
+          return next;
+        }),
+    }),
+    [theme],
+  );
 
   return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export function useTheme() {
   return useContext(ThemeContext);
 }

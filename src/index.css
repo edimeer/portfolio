@@ -1,3 +1,109 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Theme tokens, as space-separated RGB so Tailwind can add opacity.
+   Syntax colors follow GitHub's light and dark code themes. */
+@layer base {
+  :root {
+    --bg: 247 246 243;
+    --surface: 255 255 255;
+    --line: 222 221 215;
+    --fg: 27 31 36;
+    --muted: 87 96 106;
+    --accent: 190 36 42;
+    --accent-fg: 255 255 255;
+    --ok: 26 127 55;
+    --hash: 154 103 0;
+    --syn-kw: 207 34 46;
+    --syn-str: 10 48 105;
+    --syn-const: 5 80 174;
+    --syn-fn: 130 80 223;
+    --syn-ivar: 149 56 0;
+    --syn-comment: 106 115 125;
+    color-scheme: light;
+  }
+
+  .dark {
+    --bg: 11 13 16;
+    --surface: 18 22 28;
+    --line: 38 45 54;
+    --fg: 220 226 233;
+    --muted: 139 151 166;
+    --accent: 255 107 97;
+    --accent-fg: 11 13 16;
+    --ok: 63 185 80;
+    --hash: 227 179 65;
+    --syn-kw: 255 123 114;
+    --syn-str: 165 214 255;
+    --syn-const: 121 192 255;
+    --syn-fn: 210 168 255;
+    --syn-ivar: 255 166 87;
+    --syn-comment: 139 148 158;
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    @apply bg-bg font-sans text-fg antialiased;
+  }
+
+  ::selection {
+    @apply bg-accent/25;
+  }
+
+  :focus-visible {
+    @apply rounded-sm outline outline-2 outline-offset-2 outline-accent;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+}
+
+@layer components {
+  .page {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Faint graph-paper grid that fades out toward the bottom. */
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, rgb(var(--line) / 0.55) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(var(--line) / 0.55) 1px, transparent 1px);
+    background-size: 32px 32px;
+    mask-image: linear-gradient(to bottom, black 30%, transparent 100%);
+  }
+
+  .chip {
+    @apply rounded border border-line bg-bg px-2 py-0.5 font-mono text-xs text-muted;
+  }
+
+  .btn {
+    @apply inline-flex items-center gap-2 rounded-md border px-4 py-2 font-mono text-sm font-medium transition-colors;
+  }
+
+  .btn-primary {
+    @apply btn border-accent bg-accent text-accent-fg hover:bg-accent/90;
+  }
+
+  .btn-ghost {
+    @apply btn border-line bg-surface text-fg hover:border-muted;
+  }
+
+  .link {
+    @apply underline decoration-line decoration-1 underline-offset-4 transition-colors hover:text-accent hover:decoration-accent;
+  }
+}
