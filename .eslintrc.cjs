@@ -12,7 +12,8 @@ module.exports = {
   settings: { react: { version: '18.2' } },
   plugins: ['react-refresh'],
   rules: {
-    'react/jsx-no-target-blank': 'off',
+    // PropTypes are deprecated in React; this small app doesn't use them.
+    'react/prop-types': 'off',
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },

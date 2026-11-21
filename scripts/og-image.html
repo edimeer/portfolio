@@ -1,0 +1,158 @@
+<!doctype html>
+<!--
+  Source for public/og-image.png, the 1200x630 card shown when the site link
+  is shared on LinkedIn, Slack, Messenger and similar. Re-render with:
+  npm run og-image
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=JetBrains+Mono:wght@400;500;600&display=block"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #0b0d10;
+        --surface: #12161c;
+        --line: #262d36;
+        --fg: #dce2e9;
+        --muted: #8b97a6;
+        --accent: #ff6b61;
+        --ok: #3fb950;
+        --kw: #ff7b72;
+        --const: #79c0ff;
+        --str: #a5d6ff;
+        --fn: #d2a8ff;
+        --ivar: #ffa657;
+      }
+      * { box-sizing: border-box; margin: 0; }
+      html, body { width: 1200px; height: 630px; overflow: hidden; }
+      body {
+        background: var(--bg);
+        color: var(--fg);
+        font-family: Inter, system-ui, sans-serif;
+        position: relative;
+      }
+      .grid {
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(to right, rgb(38 45 54 / 0.6) 1px, transparent 1px),
+          linear-gradient(to bottom, rgb(38 45 54 / 0.6) 1px, transparent 1px);
+        background-size: 40px 40px;
+        mask-image: radial-gradient(ellipse at 30% 40%, black 20%, transparent 75%);
+      }
+      .bar {
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        height: 6px;
+        background: var(--accent);
+      }
+      .mono { font-family: "JetBrains Mono", ui-monospace, monospace; }
+      .wrap {
+        position: relative;
+        height: 100%;
+        padding: 76px 80px 64px;
+        display: grid;
+        grid-template-columns: 1fr 430px;
+        gap: 56px;
+        align-items: center;
+      }
+      .prompt { font-size: 26px; color: var(--muted); }
+      .prompt .user { color: var(--ok); }
+      .prompt .dollar { color: var(--accent); }
+      h1 {
+        margin-top: 22px;
+        font-size: 104px;
+        line-height: 1;
+        font-weight: 700;
+        letter-spacing: -0.035em;
+      }
+      .role {
+        margin-top: 22px;
+        font-size: 36px;
+        font-weight: 500;
+        color: var(--accent);
+      }
+      .tagline {
+        margin-top: 26px;
+        font-size: 27px;
+        line-height: 1.45;
+        color: var(--muted);
+        max-width: 560px;
+      }
+      .window {
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        background: var(--surface);
+        overflow: hidden;
+        box-shadow: 0 30px 60px -20px rgb(0 0 0 / 0.6);
+      }
+      .titlebar {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        padding: 14px 18px;
+        border-bottom: 1px solid var(--line);
+        font-size: 16px;
+        color: var(--muted);
+      }
+      .dot { width: 12px; height: 12px; border-radius: 50%; background: var(--line); }
+      .titlebar span:last-child { margin-left: 8px; }
+      pre {
+        padding: 20px 22px 22px;
+        font-size: 19px;
+        line-height: 1.75;
+        color: var(--fg);
+      }
+      .kw { color: var(--kw); }
+      .c { color: var(--const); }
+      .s { color: var(--str); }
+      .f { color: var(--fn); }
+      .i { color: var(--ivar); }
+      .cursor {
+        display: inline-block;
+        width: 11px;
+        height: 22px;
+        background: var(--accent);
+        vertical-align: -4px;
+      }
+      .url {
+        position: absolute;
+        left: 80px;
+        bottom: 44px;
+        font-size: 22px;
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid"></div>
+    <div class="bar"></div>
+    <div class="wrap">
+      <div>
+        <p class="prompt mono"><span class="user">edi@meer</span>:~<span class="dollar">$</span> whoami</p>
+        <h1>Edi Meer</h1>
+        <p class="role mono">Ruby on Rails Engineer</p>
+        <p class="tagline">7 years building APIs, data integrations, and fixing the database bugs that only show up in production.</p>
+      </div>
+      <div class="window">
+        <div class="titlebar mono">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span><span>edi.rb</span>
+        </div>
+<pre class="mono"><span class="kw">class</span> <span class="c">Edi</span> &lt; <span class="c">SoftwareEngineer</span>
+  <span class="kw">def</span> <span class="f">stack</span>
+    <span class="s">%w[Rails PostgreSQL</span>
+<span class="s">       MySQL Redis RSpec]</span>
+  <span class="kw">end</span>
+
+  <span class="kw">def</span> <span class="f">experience</span>
+    <span class="c">7</span>.<span class="f">years</span>
+  <span class="kw">end</span>
+<span class="kw">end</span> <span class="cursor"></span></pre>
+      </div>
+    </div>
+    <p class="url mono">edimeer.github.io/portfolio</p>
+  </body>
+</html>

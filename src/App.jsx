@@ -1,28 +1,29 @@
-import Header from "./components/Header";
-import HeroSection from "./components/HeroSection";
-import KeyMetricsSection from "./components/KeyMetricsSection";
-import ProjectSection from "./components/ProjectSection";
-import SkillSection from "./components/SkillSection";
-import ExperienceSection from "./components/ExperienceSection";
-import TestimonialSection from "./components/TestimonialSection";
-import ContactSection from "./components/ContactSection";
-import Footer from "./components/Footer";
+import Header from "./components/Header.jsx";
+import Hero from "./components/Hero.jsx";
+import Experience from "./components/Experience.jsx";
+import Projects from "./components/Projects.jsx";
+import Skills from "./components/Skills.jsx";
+import Contact from "./components/Contact.jsx";
+import Footer from "./components/Footer.jsx";
 
-const App = () => {
-  return (
-    <div className="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-200 min-h-screen">
-      <Header />
-      <main id="main">
-        <HeroSection />
-        <KeyMetricsSection />
-        <ProjectSection />
-        <SkillSection />
-        <ExperienceSection />
-        <TestimonialSection />
-        <ContactSection />
-      </main>
-      <Footer />
-    </div>
-  )
-}
-export default App
+const App = () => (
+  <div id="top" className="min-h-screen">
+    <a
+      href="#main"
+      className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-md focus:bg-accent focus:px-3 focus:py-2 focus:font-mono focus:text-sm focus:text-accent-fg"
+    >
+      Skip to content
+    </a>
+    <Header />
+    <main id="main">
+      <Hero />
+      <Experience />
+      <Projects />
+      <Skills />
+      <Contact />
+    </main>
+    <Footer />
+  </div>
+);
+
+export default App;
